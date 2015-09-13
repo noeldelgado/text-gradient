@@ -1,0 +1,29 @@
+{
+  "name": "text-gradient",
+  "version": "0.1.0",
+  "description": "Apply gradient effects to text with CSS, inline SVG mask fallback or a solid color as last resort.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/noeldelgado/text-gradient.git"
+  },
+  "keywords": [
+    "text",
+    "gradient",
+    "css",
+    "svg",
+    "mask",
+    "background-clip",
+    "text-fill-color",
+    "webkit-text-fill-color"
+  ],
+  "author": "Noel Delgado <auhcsei@gmail.com> (http://pixelia.me)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/noeldelgado/text-gradient/issues"
+  },
+  "homepage": "https://github.com/noeldelgado/text-gradient#readme"
+}
