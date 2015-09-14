@@ -3,17 +3,14 @@
 
 *Vanilla js version of [javierbyte's][0] – [react-textgradient][1].*
 
-Apply gradient effects to text with CSS, inline SVG mask fallback or a solid color as last resort.
+Apply text gradients with CSS, inline SVG mask fallback or a solid color as last resort.
 
-**Note:** Not recommended for large amounts of text, suitable for headlines.
+**Note:** Not recommended for large amounts of text, most suitable for headings and the like.
 
 ## Features
 - Uses CSS text gradients when possible (Chrome, Safari, iOS, android).
 - Fallbacks to SVG masking on Firefox `url(#gradient)`.
-- The text remains controlled via CSS (font size, family, weight, align, spacing,  etc...)
-
-[0]: https://github.com/javierbyte
-[1]: https://github.com/javierbyte/react-textgradient
+- The text remains controlled via CSS (font size, family, weight, text-align, line-height, etc...)
 
 ## Install
 ```sh
@@ -73,3 +70,6 @@ MyGradient = MyGradient.destroy();
 
 ## License
 MIT © [Noel Delgado](http://pixelia.me/)
+
+[0]: https://github.com/javierbyte
+[1]: https://github.com/javierbyte/react-textgradient
