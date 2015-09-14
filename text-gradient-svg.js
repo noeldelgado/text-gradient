@@ -1,6 +1,6 @@
 /*
  * @module TextGradientSVG
- * text-gradient v0.1.0
+ * text-gradient v0.2.0
  */
 (function(factory) { 'use strict';
     if (typeof exports === 'object') {
@@ -78,8 +78,38 @@
          * @method updateText <public, abstract> [Function]
          */
         updateText : function updateText(text) {
+            if (this._destroyed === true) {
+                return console.warn('TextGradient: calling on destroyed object');
+            }
+
+            this.options.text = text;
             this.__textElement.textContent = text;
             this.__maskedClone.textContent = text;
-         }
+         },
+
+        /* Implementation to remove the gradient and created elements.
+         * @method destroy <public, abstract> [Function]
+         */
+        destroy : function destroy() {
+            if (this._destroyed === true) {
+                return console.warn('TextGradient: calling on destroyed object');
+            }
+
+            var svgMaskElement = document.getElementById('tg-mask-' + this._id);
+            this._svgDefsContainer.removeChild(svgMaskElement);
+
+            while(this.element.childNodes.length > 0) {
+                this.element.removeChild(this.element.childNodes[0]);
+            }
+            this.element.textContent = this.options.text;
+
+            this.element = null;
+            this.options = null;
+            this.__wrapperElement = null;
+            this.__textElement = null;
+            this.__maskedClone = null;
+            this._svgDefsContainer = null;
+            this._destroyed = true;
+        }
      };
 }));

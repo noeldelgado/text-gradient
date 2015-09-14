@@ -1,9 +1,10 @@
 /**
- * text-gradient v0.1.0
+ * text-gradient v0.2.0
  * https://github.com/noeldelgado/text-gradient
  * License MIT
  */
-(function(factory) { 'use strict';
+(function(factory) {
+    'use strict';
     if (typeof exports === 'object') {
         module.exports = factory(
             require('./text-gradient-default'),
@@ -15,8 +16,9 @@
             window.TextGradientSVG
         );
     }
-}(function factory(TextGradientDefault, TextGradientSVG) { 'use strict';
-    TextGradient.version = '0.1.0';
+}(function factory(TextGradientDefault, TextGradientSVG) {
+    'use strict';
+    TextGradient.version = '0.2.0';
 
     /* Instances id counter, increased by the constructor Class.
      * Used to generate unique IDs for the SVG implementation.
@@ -59,6 +61,7 @@
      * This class allows to extend the behavior through a strategy of module inclusion.
      * That is that once feature support is determined, the module that holds the specific behaviour is included into the class.
      * @argument element <required> [NodeElement] (undefined) Element to apply the text gradient effect.
+     * @argument options <optional> [Object] (see defaults) Gradient color-stops, gradient-direction, text.
      */
     function TextGradient(element, config) {
         if ((element.nodeType > 0) === false) {
@@ -86,6 +89,8 @@
     }
 
     TextGradient.prototype = {
+        _destroyed : false,
+
         /* Initialize.
          * All implementations should include this method.
          * @method _init <private, abstract>
@@ -101,6 +106,14 @@
         updateText : function updateText() {
             throw new Error('TextGradient.prototype.update not implemented');
         },
+
+        /* Implementation to remove the gradient and created elements.
+         * All implementations should include this method.
+         * @method destroy <public, abstract> [Function]
+         */
+        destroy : function destroy() {
+            throw new Error('TextGradient.properties.destroy not implemented');
+        }
     };
 
     /* Sets the implementation and includes its methods/properties */

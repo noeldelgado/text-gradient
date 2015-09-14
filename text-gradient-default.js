@@ -1,15 +1,17 @@
 /*
  * @module TextGradientDefault
- * text-gradient v0.1.0
+ * text-gradient v0.2.0
  */
-(function(factory) { 'use strict';
+(function(factory) {
+    'use strict';
     if (typeof exports === 'object') {
         module.exports = factory();
     } else {
         window.TextGradientDefault = factory();
     }
-}(function factory() { 'use strict';
-     return {
+}(function factory() {
+    'use strict';
+    return {
         __wrapperElement : null,
 
         /* Initialize.
@@ -28,13 +30,37 @@
 
             this.updateText(this.options.text);
             this.element.appendChild(this.__wrapperElement);
-         },
+        },
 
         /* Implementation to update the text contents of this.element keeping the gradient intact.
          * @method updateText <public, abstract> [Function]
          */
-        updateText : function updateText(value) {
-            this.__wrapperElement.textContent = value;
-         }
-     };
+        updateText : function updateText(text) {
+            if (this._destroyed === true) {
+                return console.warn('TextGradient: calling on destroyed object');
+            }
+
+            this.__wrapperElement.textContent = this.options.text = text;
+        },
+
+        /* Implementation to remove the gradient and created elements.
+         * @method destroy <public, abstract> [Function]
+         */
+        destroy : function destroy() {
+            if (this._destroyed === true) {
+                return console.warn('TextGradient: calling on destroyed object');
+            }
+
+            while(this.element.childNodes.length > 0) {
+                this.element.removeChild(this.element.childNodes[0]);
+            }
+            this.element.textContent = this.options.text;
+
+            this.element = null;
+            this.options = null;
+            this.__wrapperElement = null;
+            this._destroyed = true;
+            return null;
+        }
+    };
 }));

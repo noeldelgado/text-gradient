@@ -1,6 +1,6 @@
 {
   "name": "text-gradient",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Apply gradient effects to text with CSS, inline SVG mask fallback or a solid color as last resort.",
   "main": "index.js",
   "scripts": {
