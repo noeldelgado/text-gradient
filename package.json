@@ -1,0 +1,15 @@
+{
+  "private": true,
+  "name": "text-gradient-gh-page",
+  "scripts": {
+    "dev": "watch 'npm run js' src",
+    "js": "browserify src/script.js -o bundle.js"
+  },
+  "author": "Noel Delgado <auhcsei@gmail.com> (http://pixelia.me)",
+  "dependencies": {
+    "text-gradient": "^0.2.0"
+  },
+  "devDependencies": {
+    "watch": "^0.16.0"
+  }
+}

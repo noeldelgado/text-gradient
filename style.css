@@ -1,0 +1,134 @@
+:root {
+  font-size: 14px;
+  line-height: 1.678;
+}
+
+* {margin: 0; padding: 0;}
+body {padding: 3rem 0;}
+header, section, article {display: block;}
+h1, h2, h3, h4 {margin: 1em 0;}
+
+h1 {font-size: 2rem}
+h2 {font-size: 1.5rem}
+h3 {font-size: 1.17rem}
+h4 {font-size: 1rem}
+h5 {font-size: .83rem}
+h6 {font-size: .67rem}
+
+code, pre {
+  font-family: Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal;
+  font-size: .9rem;
+  overflow-x: auto;
+}
+
+pre {padding: 1.25rem;}
+
+
+
+/* utils */
+.-font-thin {font-weight: 100}
+.-font-extra-light {font-weight: 200}
+.-font-light {font-weight: 300}
+.-font-normal {font-weight: 400}
+.-font-semi-bold {font-weight: 600}
+.-font-bold {font-weight: 700}
+.-font-ultra-bold {font-weight: 900}
+
+.-tal {text-align: left}
+.-tar {text-align: right}
+.-tac {text-align: center}
+
+
+
+/* general */
+.forkme {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.wrapper {
+  max-width: 560px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.title > span {opacity: .6;}
+section {padding: 1rem 0 2rem;}
+
+
+
+/* custom */
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  background-color: hsl(0, 0%, 96%);
+  color: hsl(228, 3%, 30%);
+}
+
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, rgb(0, 157, 233), rgb(152, 220, 0), rgb(253, 125, 7), rgb(255, 0, 118), rgb(59, 115, 172));
+  opacity: .3;
+}
+
+pre {
+  background: hsl(0, 0%, 98%);
+  border: 1px solid hsl(228, 3%, 91%);
+}
+
+section {
+  border-bottom: 3px solid hsl(0,0%,93%);
+}
+
+section:last-child {
+  border-bottom-width: 0;
+}
+
+
+
+/* demos */
+.demo-container {
+  margin: 0 0 1rem 0;
+  padding: 1rem;
+  background: hsl(0, 0%, 98%);
+  border: 1px solid hsl(228, 3%, 91%);
+}
+
+.demo-container.-neg {
+  background-color: #333;
+}
+
+.demo-container pre {
+  font-size: .7rem;
+  padding: .75rem;
+  margin: 0 -1rem -1rem;
+  border-width: 1px 0 0 0;
+}
+
+.demo-container code {
+  font-size: inherit;
+}
+
+#demo-cedarville {
+  font-family: 'Cedarville Cursive', cursive;
+  font-size: 4rem;
+  padding-bottom: .4em;
+}
+
+#demo-big-letters {
+  font-size: 18rem;
+  line-height: .8;
+  padding-bottom: 2rem;
+  text-align: center;
+}
+
+#demo-headline {
+  font-size: 3rem;
+  padding-bottom: 1rem;
+}

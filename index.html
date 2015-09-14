@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>text-gradient by noeldelgado</title>
+  <link rel="stylesheet" href="style.css">
+  <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,900,300' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Cedarville+Cursive' rel='stylesheet' type='text/css'>
+</head>
+<body>
+  <a href="https://github.com/noeldelgado/text-gradient" rel="external" class="forkme">
+    <img src="//s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me at github">
+  </a>
+
+  <div class="wrapper">
+    <header>
+      <h1 class="title">text-gradient <span class="-font-light">applies gradient effects to text with CSS, inline SVG mask fallback or a solid color as last resort.</span></h1>
+      <pre><code>npm install text-gradient --save</code></pre>
+    </header>
+    <div>
+      <section>
+        <h2 class="-font-semi-bold">Hum?</h2>
+        <p>
+          - Uses CSS text gradients when possible (Chrome, Safari, iOS, android).<br/>
+          - Fallbacks to SVG masking on Firefox <code>url(#gradient)</code>.<br/>
+          - The text remains controlled via CSS (font size, family, weight, align, line-height, etc...)
+        </p>
+      </section>
+      <section>
+        <h2 class="-font-semi-bold">Demo</h2>
+        <article class="demo-container">
+          <p id="demo-cedarville" class="-tac">Dueil Angoisseus</p>
+          <pre><code>from: 'grey', direction: 'bottom'</code></pre>
+        </article>
+        <article class="demo-container -neg">
+          <p id="demo-headline" class="-font-light -tac">The Quick Brown Fox</p>
+          <pre><code>from: '#6B6ED8', to: 'rgb(74, 197, 195)'</code></pre>
+        </article>
+        <article class="demo-container">
+          <p id="demo-big-letters" class="-font-ultra-bold">A B C D</p>
+          <pre><code>from: 'hsl(337, 49%, 65%)', to: 'hsl(209, 45%, 45%)', direction: 'top'</code></pre>
+        </article>
+      </section>
+      <section>
+        <h2 class="-font-semi-bold">License</h2>
+        <p>Copyright © Noel Delgado.</p>
+        <p>Licensed under the MIT License</p>
+      </section>
+    </div>
+  </div>
+  <script src="bundle.js"></script>
+</body>
+</html>
