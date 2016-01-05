@@ -2,6 +2,7 @@
   "private": true,
   "name": "text-gradient-gh-page",
   "scripts": {
+    "start": "python -m SimpleHTTPServer",
     "dev": "watch 'npm run js' src",
     "js": "browserify src/script.js -o bundle.js"
   },
