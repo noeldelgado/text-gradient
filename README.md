@@ -31,7 +31,7 @@ npm install text-gradient --save
 ```js
 var TextGradient = require('text-gradient');
 
-var MyGradient = TextGradient(document.getElementById('headline'), {
+var MyGradient = new TextGradient(document.getElementById('headline'), {
 	from : '#B0E537',
 	to : '#009DE9',                                                          
 	direction : 'right'
