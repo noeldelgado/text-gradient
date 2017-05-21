@@ -42,10 +42,10 @@ var MyGradient = new TextGradient(document.getElementById('headline'), {
 
 | name | type | default | description |
 |:--- |:--- |:---|:---|
-text | String | `element.textContent` | The text to display |
-from | String (valid color format) | `transparent` | Gradient's first color-stop |
-to | String (valid color format) | `transparent` | Gradient's last color-stop |
-direction | String | `right` | One of `top|right|bottom|left` |
+| text | String | `element.textContent` | The text to display |
+| from | String (valid color format) | `transparent` | Gradient's first color-stop |
+| to | String (valid color format) | `transparent` | Gradient's last color-stop |
+| direction | String | `right` | One of `top|right|bottom|left` |
 
 
 ## API
