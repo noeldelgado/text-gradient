@@ -21,7 +21,7 @@ Apply text gradients with CSS, inline SVG mask fallback or a solid color as last
 npm install text-gradient --save
 ```
 
-## Usage 
+## Usage
 
 ```
 @argument element <required> [NodeElement] the element to apply the gradient
@@ -33,19 +33,19 @@ var TextGradient = require('text-gradient');
 
 var MyGradient = new TextGradient(document.getElementById('headline'), {
 	from : '#B0E537',
-	to : '#009DE9',                                                          
+	to : '#009DE9',
 	direction : 'right'
 });
 ```
 
 ## Options
 
-| name | type | default | description
-|:--- |:--- |:---|:---
-text | String | `element.textContent` | The text to display
-from | String (valid color format) | `transparent` | Gradient's first color-stop
-to | String (valid color format) | `transparent` | Gradient's last color-stop
-direction | String | `right` | One of `top|right|bottom|left`
+| name | type | default | description |
+|:--- |:--- |:---|:---|
+text | String | `element.textContent` | The text to display |
+from | String (valid color format) | `transparent` | Gradient's first color-stop |
+to | String (valid color format) | `transparent` | Gradient's last color-stop |
+direction | String | `right` | One of `top|right|bottom|left` |
 
 
 ## API
@@ -54,8 +54,8 @@ direction | String | `right` | One of `top|right|bottom|left`
 Changes the text contents.
 
 ```js
-/* 
- * @argument text <required> [String] 
+/*
+ * @argument text <required> [String]
  * @return undefined
  */
 MyGradient.updateText('Some other catchy headline');
@@ -66,7 +66,7 @@ MyGradient.updateText('Some other catchy headline');
 Remove the text-gradient effect, references and elements created by the instance (svg container, defs, extra spans to wrap the content, etc).
 
 ```js
-/* 
+/*
  * @return null
  */
 MyGradient = MyGradient.destroy();
