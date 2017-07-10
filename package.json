@@ -3,9 +3,11 @@
   "version": "0.2.0",
   "description": "Apply gradient effects to text with CSS, inline SVG mask fallback or a solid color as last resort.",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "files": [
+    "index.js",
+    "text-gradient-default.js",
+    "text-gradient-svg.js"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/noeldelgado/text-gradient.git"
