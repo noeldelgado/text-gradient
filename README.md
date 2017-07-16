@@ -22,19 +22,18 @@ npm install text-gradient --save
 ```
 
 ## Usage
-
 ```
 @argument element <required> [NodeElement] the element to apply the gradient
 @argument options <optional> [Object] Gradient color-stops, direction, text.
 ```
 
 ```js
-var TextGradient = require('text-gradient');
+const TextGradient = require('text-gradient');
 
-var MyGradient = new TextGradient(document.getElementById('headline'), {
-	from : '#B0E537',
-	to : '#009DE9',
-	direction : 'right'
+const gradient = new TextGradient(document.getElementById('headline'), {
+  from: '#B0E537',
+  to: '#009DE9',
+  direction: 'right'
 });
 ```
 
@@ -58,7 +57,7 @@ Changes the text contents.
  * @argument text <required> [String]
  * @return undefined
  */
-MyGradient.updateText('Some other catchy headline');
+gradient.updateText('Some other catchy headline');
 ```
 
 ### destroy()
@@ -69,7 +68,7 @@ Remove the text-gradient effect, references and elements created by the instance
 /*
  * @return null
  */
-MyGradient = MyGradient.destroy();
+gradient = gradient.destroy();
 ```
 
 ## License
