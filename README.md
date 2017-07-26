@@ -7,7 +7,7 @@ Apply text gradients with CSS, inline SVG mask fallback or a solid color as last
 
 **Note:** Not recommended for large amounts of text, most suitable for headings and the like.
 
-[Demo](http://noeldelgado.github.io/text-gradient/)
+[Demo](https://noeldelgado.github.io/text-gradient/)
 
 [![text-gradient](screenshot.png)](http://noeldelgado.github.io/text-gradient/)
 
